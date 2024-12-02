@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.advertisingViewRouter = void 0;
+const express_1 = require("express");
+const advertisingView_controller_1 = require("../controllers/advertisingView.controller");
+const auth_middleware_1 = require("../middlewares/auth.middleware");
+const advertisingViewRouter = (0, express_1.Router)();
+exports.advertisingViewRouter = advertisingViewRouter;
+advertisingViewRouter.get('/:id/view', auth_middleware_1.authenticateUser, advertisingView_controller_1.incrementViewCount);
+advertisingViewRouter.get('/:id/statistics', auth_middleware_1.authenticateUser, advertisingView_controller_1.getCarStatistics);

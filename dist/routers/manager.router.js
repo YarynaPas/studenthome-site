@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.managerRouter = void 0;
+const express_1 = require("express");
+const manager_controller_1 = require("../controllers/manager.controller");
+const auth_middleware_1 = require("../middlewares/auth.middleware");
+const authorize_middleware_1 = require("../middlewares/authorize.middleware");
+const role_type_enum_1 = require("../enum/role-type-enum");
+const managerRouter = (0, express_1.Router)();
+exports.managerRouter = managerRouter;
+managerRouter.use(auth_middleware_1.authenticateUser);
+managerRouter.use((0, authorize_middleware_1.authorizeRole)(role_type_enum_1.RoleTypeEnum.Manager || role_type_enum_1.RoleTypeEnum.Admin));
+managerRouter.post('/ban/:userId', manager_controller_1.banUser);
+managerRouter.delete('/delete-ad/:carId', manager_controller_1.deleteInvalidAd);
