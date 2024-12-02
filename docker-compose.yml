@@ -1,0 +1,39 @@
+
+services:
+  app:
+    build: .
+    container_name: car-sales-app
+    ports:
+      - "3003:3003"
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=Nirv06na
+      - DB_NAME=march2024
+      - DB_PORT=3306
+    depends_on:
+      - db
+    networks:
+      - car-sales-network
+
+  db:
+    image: postgres:8
+    container_name: car-sales-db
+    environment:
+      - POSTGRES_USER=yourMasterUsername
+      - POSTGRES_PASSWORD=yourMasterPassword
+      - POSTGRES_DB=yourDatabaseName
+    ports:
+      - "3306:3306"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - car-sales-network
+
+networks:
+  car-sales-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local

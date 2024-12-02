@@ -4,57 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9218f5ec-61b1-4609-b915-f85c28eb6c3e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mock-posyman.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/database.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/email.constants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/advertisingView.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/auth.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/car.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/manager.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/user.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enum/email-type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enum/regionEnum.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enum/role-type-enum.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enum/subscribe-enum.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/errors/api-error.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middlewares/auth.middleware.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middlewares/authorize.middleware.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middlewares/error.middleware.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middlewares/validateUserData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/advertising.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/advertising.views.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/car.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/user.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repositories/car.repository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repositories/user.repository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routers/advertising.router.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routers/auth.router.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routers/car.router.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routers/manager.router.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routers/user.router.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/advertisingView.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/auth.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/car.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/email.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/password.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/user.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/main.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/partials/footer.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/partials/header.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/views/forgot-password.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/views/reset-password.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/views/unactivated.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/views/welcome.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/bad-words.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/exchange-rate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/updateExchangeRate.ts" afterDir="false" />
+    <list default="true" id="9218f5ec-61b1-4609-b915-f85c28eb6c3e" name="Changes" comment="1">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kursova-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kursova-server.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +18,18 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="yaryna bc2024-1 &lt;pas06chna@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -85,29 +45,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "jsx.switch.disabled": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/1-kursova/kursova-server/src/templates/templates-docx",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.prepare.executor": "Run",
-    "npm.start:dev.executor": "Run",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "D:\\march-2024-project\\march-2024-express\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jsx.switch.disabled&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/1-kursova/kursova-server/src/templates/templates-docx&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.prepare.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start:dev.executor&quot;: &quot;Run&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\march-2024-project\\march-2024-express\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\1-kursova\kursova-server\src\templates\templates-docx" />
@@ -169,11 +129,25 @@
       <workItem from="1732534611735" duration="27670000" />
       <workItem from="1732996507104" duration="1548000" />
       <workItem from="1732999850429" duration="69000" />
-      <workItem from="1732999969810" duration="41676000" />
+      <workItem from="1732999969810" duration="42693000" />
+      <workItem from="1733125509043" duration="803000" />
     </task>
+    <task id="LOCAL-00001" summary="1">
+      <option name="closed" value="true" />
+      <created>1733124080159</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733124080159</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
 </project>
