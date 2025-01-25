@@ -1,0 +1,93 @@
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Висота на всю видиму частину екрану */
+    overflow: hidden;
+}
+
+.background-image,
+.background-image-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.about-us-box {
+    width: 100%;
+    height: 80vh; /* Зберігаємо висоту контейнера для відображення зображення */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-content {
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-top: 20px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    height: 100vh;
+    color: white;
+}
+
+.center-title {
+
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.image-container {
+    margin-top: 10px;
+    width: 90%; /* Розширюємо ширину контейнера на 90% від ширини екрану */
+    max-width: 1200px; /* Можна встановити максимум для зображення */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.smaller-image {
+    width: 100%; /* Зображення займатиме всю доступну ширину контейнера */
+    height: auto; /* Зберігає пропорції зображення */
+}
+.insta {
+    display: flex;
+    justify-content: center; /* Центрує вміст по горизонталі */
+    align-items: center; /* Центрує вміст по вертикалі */
+    height: 35vh; /* Можна налаштувати висоту за потреби */
+}
+
+.insta-box {
+    display: flex;
+    flex-direction: row; /* Елементи будуть по горизонталі */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Додає легку тінь */
+    padding: 15px;
+    border-radius: 8px; /* Округлення куточків */
+    background-color: white; /* Можна змінити фон */
+}
+
+.insta-box-h3 {
+    font-weight: bold;
+    margin-right: 10px; /* Між текстом і іконкою буде відступ */
+}
+
+.insta-box h3 a {
+    text-decoration: none;
+    color: #333; /* Колір тексту */
+}
+
+.insta-box h3 a:hover {
+    text-decoration: underline; /* Підкреслення при наведенні */
+}

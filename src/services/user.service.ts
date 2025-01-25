@@ -1,11 +1,22 @@
-import {User} from '../models/user.model';
-import {passwordService} from './password.service';
+import { User } from '../models/user.model';
+import { passwordService } from './password.service';
+import { RoleTypeEnum } from '../enum/role-type-enum';
+import {ApiError} from "../errors/api-error";
 
 export class UserService {
     async getAllUsers() {
         return await User.findAll();
     }
 
+    async getUserData(userId: number) {
+        const user = await User.findByPk(userId);
+
+        if (!user) {
+            throw ApiError.notFound('Користувач не знайдений');
+        }
+
+        return user;
+    }
     async getUserById(id: string) {
         return await User.findByPk(id);
     }
@@ -14,13 +25,15 @@ export class UserService {
         const hashedPassword = await passwordService.hashPassword(userData.password);
 
         const newUserData = {
-            id: userData.number,
-            accountType: userData.accountType,
-            createdAt: userData.createdAt,
-            updatedAt: userData.updatedAt,
             email: userData.email,
+            full_name: userData.full_name || null,
             password: hashedPassword,
-            role: userData.role,
+            role:  RoleTypeEnum.User,
+            university: userData.university || null,
+            specialty: userData.specialty || null,
+            research_group: userData.research_group || null,
+            phone_number: userData.phone_number || null,
+            social_media: userData.social_media || null,
         };
 
         const user = await User.create(newUserData);

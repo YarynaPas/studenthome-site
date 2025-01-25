@@ -1,0 +1,56 @@
+.menu {
+    padding: 10px 80px;
+    height: 80px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /* Відносне позиціонування для коректного розташування дочірніх елементів */
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-item {
+    display: flex;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Geologica', sans-serif;
+    font-size: 16px;
+    transition: font-size 0.2s ease-in-out; /* Анімація збільшення тексту */
+}
+
+.menu a:hover,
+.menu a:active {
+    font-weight: bold;
+    color: black;
+}
+
+.menu a:focus {
+    outline: none;
+    color: black;
+}
+
+.menu a.active {
+    font-weight: bold;
+    color: black;
+}
+
+.menu-account {
+    margin-left: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}

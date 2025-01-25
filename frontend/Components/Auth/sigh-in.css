@@ -1,0 +1,100 @@
+.sign-in-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.sign-in-form {
+    margin-top: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure button and input sizes are consistent */
+}
+
+.password-group {
+    position: relative;
+}
+
+.password-toggle-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.eye-icon {
+    width: 20px; /* Set size for the eye icon */
+    height: 20px;
+}
+
+.sign-in-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #077f00;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    box-sizing: border-box; /* Ensure button size is consistent with input fields */
+}
+
+
+.sign-in-button:hover {
+    background-color: #11550d;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.links-container {
+    margin-top: 20px;
+}
+
+.links-container p {
+    margin-bottom: 5px;
+}
+
+.links-container a {
+    color: dodgerblue;
+    text-decoration: none; /* Remove underline by default */
+    cursor: pointer;
+}
+
+.links-container a:hover {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: underline; /* Add underline on hover */
+}
+.password-toggle-button button:hover{
+    color: white;
+}
+.forgot-password-link a{
+    color: dodgerblue;
+    text-decoration: none; /* Remove underline by default */
+    cursor: pointer;
+}
+.forgot-password-link a:hover {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: underline; /* Add underline on hover */
+}

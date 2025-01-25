@@ -1,0 +1,50 @@
+.faq {
+    width: 80%;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question h3 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 18;
+}
+
+.faq-icon {
+    font-size: 24px;
+    color: black;
+    user-select: none;
+}
+
+.faq-answer {
+    font-size: 16px;
+    margin: 10px 0 0;
+    color: #555;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.faq-answer.active {
+    max-height: 100px; /* Достатньо для вмісту відповіді */
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,108 @@
+/* Контейнер для списку замовлень */
+.orders-list-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Заголовок списку замовлень */
+.orders-list-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Список замовлень */
+.orders-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Картка кожного замовлення */
+.order-item {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок замовлення */
+.order-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Деталі замовлення */
+.order-detail, .order-cost, .order-status, .order-comment {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Стиль для помилок */
+.error {
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Стиль для тексту завантаження */
+.loading {
+    font-size: 16px;
+    color: #888;
+}
+
+/* Кнопка скасування замовлення */
+.delete-order-button {
+    padding: 10px 15px;
+    background-color: #ff4d4f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Стиль для інформації про платіж */
+.payment-info {
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Лінк для завантаження файлу */
+.file-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.file-link:hover {
+    background-color: #45a049;
+}
+
+/* Стиль для відгуків */
+.review-form-container {
+    margin-top: 20px;
+}
+
+.download-button{
+    padding: 10px 15px;
+    background-color: #0C5F2F;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}

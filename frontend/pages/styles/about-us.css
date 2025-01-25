@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+body {
+    font-family: 'Geologica', sans-serif;
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Висота на всю видиму частину екрану */
+    overflow: hidden;
+}
+
+.background-image,
+.background-image-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay-content {
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-top: 20px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    height: 100vh;
+    color: white;
+}
+
+.center-title {
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.p-container {
+    width: 70%;
+    text-align: left;
+    font-size: 16px;
+    color: white;
+}
+
+.image-container {
+    margin-top: 10px;
+    width: 40%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.about-us-box {
+    font-family: 'Geologica', sans-serif;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.p-container {
+    width: 40%;
+}
+
+.pros {
+    display: flex;
+    flex-direction: column; /* Кожен pros-1 займає 100% ширини і йде один під одним */
+    width: 90%;
+    padding: 0 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.pros-1 {
+    display: flex;
+    flex-direction: row; /* Розташовуємо картинку і текст горизонтально */
+    justify-content: space-between; /* Розподіляємо картинку і текст по ширині */
+    width: 100%; /* Кожен pros-1 займає всю ширину контейнера */
+    margin-bottom: 20px; /* Відступ між елементами */
+    align-items: center; /* Центруємо по вертикалі */
+    padding: 0 20px;
+}
+
+.pros-1-image {
+    flex: 1; /* Задаємо картинці 1/3 ширини контейнера */
+    max-width: 250px; /* Максимальна ширина картинки */
+    display: flex;
+    justify-content: center; /* Центруємо картинку по горизонталі */
+}
+
+.pros-1-p {
+    flex: 2; /* Текст займає 2/3 ширини контейнера */
+    padding: 0 20px; /* Відступи між текстом та картинкою */
+    font-size: 16px; /* Розмір шрифта для параграфа */
+    color: #333; /* Колір тексту */
+}
+
+.smaller-image {
+    max-width: 100%; /* Картинка не виходить за межі контейнера */
+    height: auto; /* Пропорції картинки не змінюються */
+}
+
+.h2 {
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.part3 {
+    width: 85vw;
+    margin-top: 40px;
+    clear: both;
+    margin-right: 0;
+    display: flex;
+    margin-left: 40px;
+}
+
+.contacts {
+    padding-left: 20px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center; /* Вирівнюємо по центру */
+    gap: 10px;
+    width: 100%;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.contact-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 32%; /* Тепер блоки займають рівну ширину */
+    box-sizing: border-box; /* Враховує відступи і падінг */
+    margin: 0 5px; /* Одиничний відступ з обох боків */
+}
+
+.contact-image img {
+    padding-top: 8px;
+    width: 100px;
+    height: 100px;
+}
+
+h5 {
+    font-weight: 18;
+}
+
+.contact-1 p {
+    margin: 10px 0;
+}
+
+.contact-1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-1 a:hover {
+    text-decoration: underline;
+}
+
+/* Медіа-запити для адаптивності */
+
+/* Мобільні пристрої (максимальна ширина 768px) */
+@media (max-width: 768px) {
+    .overlay-content {
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+
+    .center-title {
+        font-size: 20px;
+    }
+
+    .p-container {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .image-container {
+        width: 80%;
+    }
+
+    .about-us-box {
+        font-size: 18px;
+    }
+
+    .pros {
+        padding: 0 10px;
+    }
+
+    .pros-1 {
+        flex-direction: column; /* Перехід до вертикального вигляду */
+        align-items: flex-start; /* Розташування елементів вертикально */
+        margin-bottom: 15px;
+    }
+
+    .pros-1-image {
+        max-width: 200px; /* Зменшення розміру картинки */
+        margin-bottom: 10px;
+    }
+
+    .pros-1-p {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .contacts {
+        flex-direction: column; /* Вирівнювання контактів вертикально */
+        gap: 20px;
+    }
+
+    .contact-1 {
+        width: 100%; /* Контакти займають всю ширину */
+        margin: 0 0 20px 0;
+    }
+}
+
+/* Для великих екранів (понад 1200px) */
+@media (min-width: 1200px) {
+    .overlay-content {
+        padding-right: 150px;
+        padding-left: 150px;
+    }
+
+    .center-title {
+        font-size: 32px;
+    }
+
+    .p-container {
+        width: 60%;
+    }
+
+    .image-container {
+        width: 50%;
+    }
+
+    .about-us-box {
+        font-size: 24px;
+    }
+
+    .pros {
+        width: 80%;
+    }
+}

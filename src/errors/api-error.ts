@@ -5,6 +5,7 @@ export class ApiError extends Error {
         super(message);
         this.statusCode = statusCode;
         this.name = 'ApiError';
+        console.error(`Error [${statusCode}]: ${message}`);
     }
 
     static badRequest(message: string): ApiError {
@@ -13,6 +14,10 @@ export class ApiError extends Error {
 
     static unauthorized(message: string): ApiError {
         return new ApiError(401, message);
+    }
+
+    static forbidden(message: string): ApiError {
+        return new ApiError(403, message);
     }
 
     static notFound(message: string): ApiError {

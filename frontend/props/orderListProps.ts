@@ -1,0 +1,3 @@
+interface OrdersListProps {
+    status: string;
+}

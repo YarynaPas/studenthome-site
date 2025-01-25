@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+body {
+    font-family: 'Geologica', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 83vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Початок контейнера */
+    text-align: center;
+    height: 100vh;
+    color: white;
+    padding-top: 20px; /* Мінімальний відступ зверху */
+}
+
+.center-title {
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Менший відступ між заголовками */
+}
+
+.h3-container {
+    margin-top: 5px; /* Мінімальний відступ між H3 і H2 */
+    width: 80%; /* Обмежує ширину для вирівнювання */
+    text-align: left; /* Текст вирівняний по лівому краю */
+    font-size: 16px;
+    margin-left: 230px;
+    color: white;
+}
+.h2{
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.image-container {
+    margin-top: 10px; /* Невеликий відступ між H3 і зображенням */
+    width: 70vw; /* Обмеження ширини зображення */
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.smaller-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.order-title{
+    margin-top: 0;
+    margin-left: 50px;
+}
+.order-image{
+    width: 85vw;
+}
+.order-section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.collaboration-image{
+    padding-right: 100px;
+    padding-left: 100px;
+}
+.collaboration-image-1 {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Це приховає все, що виходить за межі контейнера */
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Зображення займає всю доступну площу */
+    z-index: -1;
+}.collaboration-image-1 {
+     position: relative;
+     width: 100%;
+     height: auto;
+ }
+
+.background-rectangle {
+    background-color: #24A1DE; /* Колір прямокутника */
+    width: 100%;
+    height: 550px; /* Висота прямокутника */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Зробити його фоном */
+}
+
+.collaboration-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-telegram {
+    width: 40%; /* Ширина для картинки */
+}
+
+.telegram-div {
+    width: 60%; /* Ширина для тексту */
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.telegram-div h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 18;
+}
+
+.telegram-button {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: #0088cc;
+    padding: 15px 30px;
+    border: none;
+    width: 200px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.telegram-button .telegram-text {
+    margin-right: 10px;
+}
+
+.telegram-icon {
+    width: 25px;
+    height: 25px;
+}
+.part3 {
+    width: 85vw;
+    margin-left: 50px;
+    margin-top: 40px;
+    clear: both;
+
+}
+
+.part3 img {
+    width: 100%;
+    height: auto;
+}
+
+.part3 h2 {
+    display: flex;
+    margin-left: 40px;
+}
+.part4{
+    margin-left: 50px;
+    display: flex;
+    align-items: flex-start;
+}
+
+
+
