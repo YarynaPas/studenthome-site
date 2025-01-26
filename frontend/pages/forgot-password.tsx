@@ -13,7 +13,7 @@ const ForgotPassword: React.FC = () => {
     const handleForgotPassword = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            await api.post('/auth/forgot-password', { email });
+            await api.post(`${process.env.NEXT_PUBLIC_API_URL}/auth/forgot-password`, { email });
             setMessage('Інструкції по відновленню паролю надіслано на вашу електронну пошту.');
         } catch {
             setMessage('Сталася помилка, спробуйте ще раз.');

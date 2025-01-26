@@ -13,7 +13,7 @@ const SignIn: React.FC = () => {
 
     const fetchUserData = async (token: string) => {
         try {
-            const response = await fetch('http://localhost:3003/users/user', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/user`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                     'Content-Type': 'application/json',

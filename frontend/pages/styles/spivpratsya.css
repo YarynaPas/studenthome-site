@@ -204,3 +204,86 @@ body {
     height: auto;
 }
 
+@media (max-width: 768px) {
+    .overlay-content {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .center-title {
+        font-size: 22px;
+    }
+
+    .p-container {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .image-container {
+        width: 90%;
+        padding-bottom: 20px;
+    }
+
+    .contact-1 {
+        flex: 0 0 45%;
+    }
+
+    .qualities-10 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay-content {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .center-title {
+        font-size: 20px;
+    }
+
+    .p-container {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .contact-1 {
+        flex: 0 0 100%;
+    }
+
+    .qualities-10 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+/* Зміни для мобільних пристроїв */
+@media (max-width: 768px) {
+    .contacts {
+        display: flex;
+        flex-wrap: wrap; /* Дозволяє переносити блоки в новий рядок, якщо не вистачає місця */
+        justify-content: center; /* Розподіляє елементи по ширині */
+        gap: 10px; /* Проміжок між блоками */
+    }
+
+    .contact-1 {
+        flex: 0 0 48%; /* Кожен блок займає приблизно половину ширини */
+        margin-bottom: 20px; /* Відступи між блоками */
+        margin-left: 0;
+    }
+}
+
+/* Для ще менших екранів */
+@media (max-width: 480px) {
+    .contacts {
+        flex-direction: column; /* Заміна на вертикальне вирівнювання */
+        align-items: center; /* Вирівнювання елементів по центру */
+    }
+
+    .contact-1 {
+        width: 90%; /* Блоки займають більшу ширину на маленьких екранах */
+    }
+}

@@ -88,4 +88,80 @@ p {
 .signup-button:hover {
     background-color: #f0f0f0; /* Легкий ефект при наведенні */
 }
+@media (max-width: 1200px) {
+    .footer {
+        padding: 40px 50px; /* Зменшуємо відступи */
+    }
+
+    .footer-columns {
+        gap: 20px; /* Додаємо проміжок між контейнерами */
+    }
+
+    .signup-button {
+        width: 250px; /* Зменшуємо ширину кнопки */
+        font-size: 16px;
+        height: 50px;
+    }
+
+    .text1, .text2, .text3 {
+        font-size: 90%; /* Зменшення розміру тексту */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px; /* Зменшуємо відступи */
+    }
+
+    .footer-columns {
+        flex-direction: column; /* Вертикальне розташування секцій футера */
+        align-items: center;
+        gap: 20px;
+    }
+
+    .container {
+        width: 100%; /* Контейнер займає всю ширину */
+        text-align: center;
+    }
+
+    .social-media {
+        justify-content: center; /* Центруємо іконки соціальних мереж */
+        margin-top: 20px;
+    }
+
+    .signup-button {
+        width: 80%; /* Кнопка займає 80% ширини екрану */
+        font-size: 14px;
+        height: 45px;
+    }
+
+    .text1, .text2, .text3 {
+        font-size: 14px; /* Зменшення тексту для мобільних пристроїв */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px; /* Мінімальні відступи */
+    }
+
+    .footer-columns {
+        gap: 15px;
+    }
+
+    .social-media img {
+        width: 36px; /* Зменшуємо іконки соціальних мереж */
+        height: 36px;
+    }
+
+    .signup-button {
+        width: 100%; /* Кнопка розтягується на всю ширину */
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .text1, .text2, .text3 {
+        font-size: 12px; /* Мінімальний розмір тексту для зручності читання */
+    }
+}
 

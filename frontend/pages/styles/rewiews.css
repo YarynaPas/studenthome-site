@@ -91,3 +91,38 @@
 .insta-box h3 a:hover {
     text-decoration: underline; /* Підкреслення при наведенні */
 }
+/* Глобальні стилі для всіх сторінок */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1, h2, h3 {
+        font-size: 90%; /* Зменшення заголовків */
+    }
+
+    .button, .nav-button, .action-button, .sign-in-button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .container, .cabinet-content, .sign-in-container {
+        width: 100%; /* Контейнер на всю ширину */
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 80%; /* Ще більше зменшення шрифтів */
+    }
+
+    .button, .nav-button, .action-button, .sign-in-button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .orders-table-wrapper, .contacts {
+        overflow-x: auto; /* Переключення на горизонтальний скрол для великих таблиць */
+    }
+}

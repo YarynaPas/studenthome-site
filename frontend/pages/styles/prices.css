@@ -188,3 +188,59 @@ body {
 
 
 
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1, h2, h3 {
+        font-size: 90%;
+    }
+
+    .button, .nav-button, .action-button, .sign-in-button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .container, .cabinet-content, .sign-in-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .group-19 {
+        display: none; /* Приховуємо зображення Group 19 */
+    }
+
+    .group-19-replacement {
+        display: block; /* Відображаємо прямокутник */
+        background-color: #11550D; /* Встановлюємо той самий колір */
+        width: 100%;
+        height: 150px; /* Прямокутник за висотою */
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 80%;
+    }
+
+    .button, .nav-button, .action-button, .sign-in-button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .orders-table-wrapper, .contacts {
+        overflow-x: auto;
+    }
+
+    .group-19 {
+        display: none; /* Приховуємо зображення Group 19 */
+    }
+
+    .group-19-replacement {
+        display: block;
+        background-color: #11550D;
+        width: 100%;
+        height: 120px; /* Меньший прямокутник для мобільних пристроїв */
+    }
+}

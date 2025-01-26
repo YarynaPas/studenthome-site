@@ -91,7 +91,7 @@ const OrdersList: React.FC<OrdersListProps> = ({ status }) => {
             formData.append('file', selectedFile);
 
             const response = await axios.put(
-                `http://localhost:3003/order/${orderId}/attach-file`,
+                `${process.env.NEXT_PUBLIC_API_URL}/order/${orderId}/attach-file`,
                 formData,
                 {
                     headers: {
@@ -120,7 +120,7 @@ const OrdersList: React.FC<OrdersListProps> = ({ status }) => {
             }
 
             const response = await axios.get(
-                `http://localhost:3003/order/${orderId}/download`,
+                `${process.env.NEXT_PUBLIC_API_URL}/order/${orderId}/download`,
                 {
                     responseType: 'blob',
                     headers: { Authorization: `Bearer ${token}` },

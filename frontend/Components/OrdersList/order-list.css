@@ -1,17 +1,22 @@
-/* Контейнер для списку замовлень */
+/* Загальний контейнер для списку замовлень */
 .orders-list-container {
-    margin: 20px;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
+    background-color: #fefefe;
+    border-radius: 12px;
+    max-width: 1200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Заголовок списку замовлень */
 .orders-list-header {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 10px;
 }
 
 /* Список замовлень */
@@ -22,87 +27,183 @@
 
 /* Картка кожного замовлення */
 .order-item {
-    background-color: #fff;
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Заголовок замовлення */
 .order-title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    color: #444;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    border-left: 4px solid #0C5F2F;
+    padding-left: 10px;
 }
 
 /* Деталі замовлення */
-.order-detail, .order-cost, .order-status, .order-comment {
-    font-size: 14px;
-    color: #666;
-    margin: 5px 0;
+.order-detail,
+.order-cost,
+.order-status,
+.order-comment {
+    font-size: 16px;
+    color: #555;
+    margin: 8px 0;
+    line-height: 1.5;
 }
 
-/* Стиль для помилок */
-.error {
-    color: red;
-    font-size: 16px;
-    font-weight: bold;
+/* Стиль для кнопок */
+button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.delete-order-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+}
+
+.delete-order-button:hover {
+    background-color: #c0392b;
+}
+
+.download-button {
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+}
+
+.download-button:hover {
+    background-color: #219150;
+}
+
+/* Інформація про платіж */
+.payment-info {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* Стиль для тексту завантаження */
 .loading {
-    font-size: 16px;
+    font-size: 18px;
     color: #888;
+    text-align: center;
 }
 
-/* Кнопка скасування замовлення */
-.delete-order-button {
-    padding: 10px 15px;
-    background-color: #ff4d4f;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 10px;
+/* Стиль для помилок */
+.error {
+    color: #e74c3c;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
 }
 
-/* Стиль для інформації про платіж */
-.payment-info {
-    background-color: #f3f3f3;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
+/* Відгук форма */
+.review-form-container {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
 }
 
-/* Лінк для завантаження файлу */
+/* Загальний стиль списку */
+.orders-list-container ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Загальний стиль для посилань */
 .file-link {
     display: inline-block;
     margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #4caf50;
+    padding: 10px 20px;
+    background-color: #3498db;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 8px;
     text-decoration: none;
+    text-align: center;
 }
 
 .file-link:hover {
-    background-color: #45a049;
+    background-color: #2980b9;
 }
 
-/* Стиль для відгуків */
-.review-form-container {
-    margin-top: 20px;
+/* Медійні стилі для адаптивності */
+@media (max-width: 768px) {
+    .orders-list-container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .orders-list-header {
+        font-size: 24px;
+    }
+
+    .order-item {
+        padding: 15px;
+    }
+
+    .order-title {
+        font-size: 18px;
+    }
+
+    .order-detail,
+    .order-cost,
+    .order-status,
+    .order-comment {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
 }
 
-.download-button{
-    padding: 10px 15px;
-    background-color: #0C5F2F;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 10px;
+@media (max-width: 480px) {
+    .orders-list-header {
+        font-size: 20px;
+    }
+
+    .order-title {
+        font-size: 16px;
+    }
+
+    .order-detail,
+    .order-cost,
+    .order-status,
+    .order-comment {
+        font-size: 12px;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
 }

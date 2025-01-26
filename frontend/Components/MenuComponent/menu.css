@@ -54,3 +54,82 @@ nav {
     align-items: center;
     justify-content: flex-end;
 }
+/* Глобальні адаптивні стилі для елементів меню та акаунту */
+@media (max-width: 1200px) {
+    .menu {
+        padding: 10px 40px; /* Зменшення відступів */
+    }
+
+    nav {
+        gap: 15px; /* Менший проміжок між пунктами меню */
+    }
+
+    .menu-account {
+        margin-left: auto; /* Вирівнювання секції акаунту */
+    }
+
+    .menu a {
+        font-size: 14px; /* Зменшення розміру тексту для пунктів меню */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column; /* Перехід до вертикального розташування */
+        height: auto; /* Автоматична висота для уникнення обрізання */
+        padding: 10px 20px;
+        gap: 15px; /* Додати відступи між секціями меню */
+    }
+
+    .links {
+        flex-direction: column; /* Переходить у вертикальний режим */
+        gap: 10px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .menu-account {
+        margin-left: 0;
+        justify-content: center; /* Центрування акаунту */
+    }
+
+    .menu a {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .login-button {
+        width: 100%; /* Кнопка займає всю ширину */
+        max-width: 200px; /* Максимальна ширина для великих екранів */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        padding: 10px; /* Мінімальні відступи */
+        gap: 10px;
+    }
+
+    nav {
+        flex-direction: column; /* Вертикальне меню */
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .menu-account {
+        flex-direction: column; /* Вертикальне розташування акаунту */
+        gap: 10px;
+        align-items: center;
+    }
+
+    .login-button {
+        height: 36px; /* Злегка збільшуємо висоту для сенсорних екранів */
+        font-size: 14px;
+        width: 90%; /* Розтягування кнопки */
+    }
+}
+

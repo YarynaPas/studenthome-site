@@ -37,7 +37,7 @@ const AdminCabinet = () => {
                 router.push("/sigh-in");
                 return;
             }
-            const response = await fetch(`http://localhost:3003/admin/orders`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/admin/orders`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -84,7 +84,7 @@ const AdminCabinet = () => {
             }
 
             const response = await fetch(
-                `http://localhost:3003/admin/orders/${selectedOrder}/status`,
+                `${process.env.NEXT_PUBLIC_API_URL}/admin/orders/${selectedOrder}/status`,
                 {
                     method: "PUT",
                     headers: {
@@ -123,7 +123,7 @@ const AdminCabinet = () => {
             }
 
             const response = await fetch(
-                `http://localhost:3003/admin/orders/${selectedOrder}/payment-status`,
+                `${process.env.NEXT_PUBLIC_API_URL}/admin/orders/${selectedOrder}/payment-status`,
                 {
                     method: "PUT",
                     headers: {
@@ -162,7 +162,7 @@ const AdminCabinet = () => {
             }
 
             const response = await fetch(
-                `http://localhost:3003/admin/orders/${selectedOrder}/price`,
+                `${process.env.NEXT_PUBLIC_API_URL}/admin/orders/${selectedOrder}/price`,
                 {
                     method: "PUT",
                     headers: {
@@ -201,7 +201,7 @@ const AdminCabinet = () => {
             formData.append("file", selectedFile);
 
             const response = await fetch(
-                `http://localhost:3003/admin/orders/${encodeURIComponent(selectedOrder)}/attach-file`,
+                `NEXT_PUBLIC_API_URL/admin/orders/${encodeURIComponent(selectedOrder)}/attach-file`,
                 {
                     method: "PUT",
                     headers: { Authorization: `Bearer ${token}` },
@@ -225,7 +225,7 @@ const AdminCabinet = () => {
         try {
             const token = localStorage.getItem("token");
             const response = await fetch(
-                `http://localhost:3003/admin/orders/${encodeURIComponent(orderId)}/download`,
+                `${process.env.NEXT_PUBLIC_API_URL}/admin/orders/${encodeURIComponent(orderId)}/download`,
                 {
                     headers: { Authorization: `Bearer ${token}` },
                 }

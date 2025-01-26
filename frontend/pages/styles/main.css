@@ -255,17 +255,17 @@ body {
 .telegram-button {
     background-color: white;
     border: none;
-    padding: 10px 30px; /* Розширення кнопки */
+    padding: 10px 30px;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    gap: 10px; /* Відстань між текстом і логотипом */
+    gap: 10px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     width: 200px;
-    max-width: 100%; /* Не виходить за межі батьківського контейнера */
+    max-width: 100%;
 }
 
 .telegram-button:hover {
@@ -278,7 +278,7 @@ body {
 }
 
 .telegram-text {
-    font-size: 18px; /* Трохи більший текст */
+    font-size: 18px;
     color: #333;
     font-family: 'Geologica', sans-serif;
     font-weight: 500;
@@ -308,33 +308,56 @@ body {
     display: flex;
     align-items: flex-start;
 }
-
-/* MEDIA QUERIES FOR RESPONSIVENESS */
-
-/* For tablets and below */
 @media (max-width: 768px) {
     .text-box {
         flex-direction: column;
         width: 90%;
+        text-align: center;
     }
 
     .box1,
     .box2 {
         width: 100%;
+        text-align: center;
     }
 
     .signup-button {
         font-size: 14px;
         padding: 12px 25px;
+        margin-top: 20px;
+    }
+
+    .quality-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .quality-item {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .quality-item img {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
     }
 
     .quality-text {
-        font-size: 18px;
+        font-size: 16px;
+    }
+
+    .box2 img {
+        display: none;
+    }
+
+    .image-container .elegant-woman {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
     }
 
     .telegram-button {
@@ -349,9 +372,33 @@ body {
         width: 100%;
         height: auto;
     }
+
+    .quality-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .quality-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .quality-item img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .quality-text {
+        font-size: 14px;
+    }
 }
 
-/* For mobile phones and below */
 @media (max-width: 480px) {
     .text-box h2 {
         font-size: 22px;
@@ -367,12 +414,12 @@ body {
     }
 
     .quality-item img {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
 
     .quality-text {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .telegram-button {
@@ -388,4 +435,166 @@ body {
         width: 100%;
         height: auto;
     }
+
+    .box2 img {
+        display: none;
+    }
+
+    .image-container .elegant-woman {
+        width: 80%;
+        height: auto;
+        object-fit: contain;
+        margin: 0 auto;
+    }
 }
+
+@media (max-width: 480px) {
+    .cabinet-title {
+        font-size: 20px;
+    }
+
+    .nav-button {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .cabinet-title {
+        font-size: 24px;
+    }
+
+    .user-info-container, .create-order-form-container {
+        padding: 20px;
+    }
+
+    .nav-button {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .orders-list-container {
+        padding: 20px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    .image-container {
+        background-color: #11550D;
+        height: 70vh;
+    }
+
+    .elegant-woman, .image-container img {
+        display: none;
+    }
+
+    .text-box {
+        color: black;
+    }
+
+    .qualities .box {
+        display: block;
+    }
+
+    .quality-item img {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabinet-title {
+        font-size: 20px;
+    }
+
+    .nav-button {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+
+    .image-container {
+        background-color: #11550D;
+        height: 60vh;
+    }
+
+    .elegant-woman, .image-container img {
+        display: none;
+    }
+
+    .text-box {
+        color: black;
+    }
+
+    .qualities .box {
+        display: block;
+    }
+
+    .quality-item img {
+        display: block;
+    }
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-color: #11550D;
+}
+
+.elegant-woman {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    color: black;
+}
+
+.qualities .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.quality-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.quality-item img {
+    width: 80px;
+    height: 80px;
+}
+
+.quality-text {
+    font-size: 14px;
+}
+
+

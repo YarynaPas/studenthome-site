@@ -15,7 +15,7 @@ const ResetPassword: React.FC = () => {
     const handleResetPassword = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            const { data } = await api.post('auth/reset-password', { token, newPassword });
+            const { data } = await api.post(`${process.env.NEXT_PUBLIC_API_URL}/auth/forgot-passwordauth/reset-password`, { token, newPassword });
             setMessage(data.message);
             await router.push('/sigh-in');  // Перенаправлення після успішного скидання пароля
         } catch {

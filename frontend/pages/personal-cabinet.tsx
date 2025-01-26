@@ -29,14 +29,14 @@ const PersonalCabinet: React.FC = () => {
                 const redirectUrl =
                     process.env.NODE_ENV === 'production'
                         ? 'https://yourdomain.com/main'
-                        : 'http://localhost:3000/main';
+                        : '${process.env.NEXT_PUBLIC_API_URL}/main';
 
                 router.push(redirectUrl);
                 return;
             }
 
             try {
-                const response = await fetch('http://localhost:3003/users/user', {
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/user`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                         'Content-Type': 'application/json',
