@@ -1,0 +1,30 @@
+/* Глобальні стилі для всієї сторінки */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Встановлюємо мінімальну висоту для заповнення всієї сторінки */
+}
+
+.main-content {
+  flex: 1; /* Основний вміст сторінки займає весь простір між хедером і футером */
+}
+
+footer {
+  background-color: #2e2e2e;
+  color: #ffffff;
+  padding: 20px 40px;
+  border-top: 3px solid #ffffff;
+  text-align: center;
+  position: relative;
+}
