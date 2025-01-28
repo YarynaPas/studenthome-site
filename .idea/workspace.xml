@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9218f5ec-61b1-4609-b915-f85c28eb6c3e" name="Changes" comment="2">
+    <list default="true" id="9218f5ec-61b1-4609-b915-f85c28eb6c3e" name="Changes" comment="4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/services/email.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/services/email.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +80,7 @@
     "npm.start (1).executor": "Run",
     "npm.start.executor": "Run",
     "npm.start:dev.executor": "Run",
+    "npm.test.executor": "Run",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -105,7 +105,7 @@
       <recent name="D:\studenthome\studenthome\frontend\app\(main)" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start (1)">
+  <component name="RunManager" selected="npm.test">
     <configuration default="true" type="js.build_tools.npm" singleton="false">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -145,8 +145,19 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="js.build_tools.npm" singleton="false" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="C:/Program Files/nodejs/npm" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.test" />
         <item itemvalue="npm.start (1)" />
         <item itemvalue="npm.start:dev" />
       </list>
@@ -181,7 +192,7 @@
       <workItem from="1737752341487" duration="22851000" />
       <workItem from="1737775392990" duration="131000" />
       <workItem from="1737776429861" duration="17417000" />
-      <workItem from="1738030547122" duration="6082000" />
+      <workItem from="1738030547122" duration="6610000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -271,7 +282,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738039501745</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="3">
+      <option name="closed" value="true" />
+      <created>1738039876260</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1738039876260</updated>
+    </task>
+    <task id="LOCAL-00013" summary="4">
+      <option name="closed" value="true" />
+      <created>1738040128203</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1738040128203</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +319,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="1" />
     <MESSAGE value="2" />
-    <option name="LAST_COMMIT_MESSAGE" value="2" />
+    <MESSAGE value="3" />
+    <MESSAGE value="4" />
+    <option name="LAST_COMMIT_MESSAGE" value="4" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
