@@ -25,6 +25,7 @@ app.use((err, req, res, next) => {
 });
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
+//
 app.use('/users', user_router_1.userRouter);
 app.use('/auth', auth_router_1.default);
 app.use('/order', orders_router_1.orderRouter);
