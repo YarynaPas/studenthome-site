@@ -5,27 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9218f5ec-61b1-4609-b915-f85c28eb6c3e" name="Changes" comment="1">
+      <change afterPath="$PROJECT_DIR$/ Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/slnx.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Components/AccountMenu/account-menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Components/AccountMenu/account-menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Components/Auth/SighInComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Components/Auth/SighInComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Components/FooterComponent/FooterComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Components/FooterComponent/FooterComponent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Components/MenuComponent/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Components/MenuComponent/menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eslint.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/eslint.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Components/CreateOrder/CreateOrderForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Components/CreateOrder/CreateOrderForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/Components/OrdersList/OrdersList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Components/OrdersList/OrdersList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Components/OrdersList/order-list.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Components/OrdersList/order-list.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/admin-cabinet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin-cabinet.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/forgot-password.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/forgot-password.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/enums/subject-type-enum.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/enums/subject-type-enum.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/pages/personal-cabinet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/personal-cabinet.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/reset-password.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/reset-password.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/styles/about-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/styles/about-us.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/styles/admin-cabinet.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/styles/admin-cabinet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/styles/forgot-password.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/styles/forgot-password.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/styles/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/styles/personal-cabinet.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/styles/personal-cabinet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/styles/prices.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/styles/prices.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/styles/reset-password.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/styles/reset-password.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/styles/rewiews.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/styles/rewiews.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/styles/spivpratsya.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/styles/spivpratsya.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/Ð´Ð¾Ð³Ð¾Ð²ÑÑ.doc" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +72,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -185,7 +179,8 @@
       <workItem from="1737595722811" duration="4809000" />
       <workItem from="1737752341487" duration="22851000" />
       <workItem from="1737775392990" duration="131000" />
-      <workItem from="1737776429861" duration="7987000" />
+      <workItem from="1737776429861" duration="17417000" />
+      <workItem from="1738030547122" duration="1206000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -227,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737773529909</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1">
+      <option name="closed" value="true" />
+      <created>1737935236648</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1737935236648</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +248,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="1" />
     <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>

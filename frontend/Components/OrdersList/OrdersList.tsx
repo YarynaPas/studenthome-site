@@ -198,7 +198,7 @@ const OrdersList: React.FC<OrdersListProps> = ({ status }) => {
                             {order.file_path && (
                                 <div className="file-download">
                                     <button
-                                        onClick={() => handleDownload(order.id, order.file_path)}
+                                        onClick={() => handleDownload(order.id, order.file_path || 'default-file-path')}
                                         className="download-button"
                                     >
                                         Завантажити файл

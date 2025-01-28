@@ -194,8 +194,10 @@ export const SubjectsEnum = {
     ],
 };
 const getSubjectById = (discipline: SubjectsByDiscipline, id: number) => {
-    const subjects = SubjectsEnum[discipline];
-    if (subjects) {
+    const disciplineKey = Object.keys(SubjectsByDiscipline).find(key => SubjectsByDiscipline[key as keyof typeof SubjectsByDiscipline] === discipline);
+
+    if (disciplineKey && SubjectsEnum[disciplineKey as keyof typeof SubjectsEnum]) {
+        const subjects = SubjectsEnum[disciplineKey as keyof typeof SubjectsEnum];
         return subjects.find(subject => subject.id === id);
     }
     return null;

@@ -4,10 +4,30 @@ import { SubjectsByDiscipline, SubjectsEnum } from '@/enums/subject-type-enum';
 import api from '@/utils/api';
 import './CreateOrderModal.css';
 
-const CreateOrderModal: React.FC<CreateOrderModalProps> = ({ onClose, onOrderCreated }) => {
+type FormData = {
+    type: keyof typeof OrderTypesEnum | '';
+    discipline_name: string;
+    subject_name: string;
+    number_of_pages: string;
+    deadline: string;
+    comment: string;
+    topic: string;
+    social_media: string;
+};
+
+const disciplineMap: Record<SubjectsByDiscipline, keyof typeof SubjectsEnum> = {
+    [SubjectsByDiscipline.ECONOMIC_SCIENCES]: 'ECONOMIC_SCIENCES',
+    [SubjectsByDiscipline.HUMANITIES]: 'HUMANITIES',
+    [SubjectsByDiscipline.MATHEMATICAL_SCIENCES]: 'MATHEMATICAL_SCIENCES',
+    [SubjectsByDiscipline.NATURAL_SCIENCES]: 'NATURAL_SCIENCES',
+    [SubjectsByDiscipline.LAW]: 'LAW',
+};
+
+
+const CreateOrderModal: React.FC<{ onClose: () => void; onOrderCreated: () => void }> = ({ onClose, onOrderCreated }) => {
     const [selectedDiscipline, setSelectedDiscipline] = useState<SubjectsByDiscipline | ''>('');
     const [subjects, setSubjects] = useState<any[]>([]);
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<FormData>({
         type: '',
         discipline_name: '',
         subject_name: '',
@@ -40,23 +60,19 @@ const CreateOrderModal: React.FC<CreateOrderModalProps> = ({ onClose, onOrderCre
 
     useEffect(() => {
         if (selectedDiscipline) {
-            const selectedSubjects = SubjectsEnum[selectedDiscipline] || [];
-            if (selectedSubjects.length > 0) {
-                setSubjects(selectedSubjects);
-            } else {
-                setSubjects([]);
-                setMessage('Предмети не знайдено для вибраної дисципліни.');
-            }
+            const selectedKey = disciplineMap[selectedDiscipline];
+            const selectedSubjects = SubjectsEnum[selectedKey] || [];
+            setSubjects(selectedSubjects);
         } else {
             setSubjects([]);
-            setMessage('Будь ласка, виберіть дисципліну.');
         }
     }, [selectedDiscipline]);
+
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         const { type, discipline_name, subject_name, number_of_pages, deadline, topic, social_media } = formData;
-        const missingFields = [];
+        const missingFields: string[] = [];
 
         if (!type) missingFields.push('Тип роботи');
         if (!discipline_name) missingFields.push('Дисципліна');
@@ -77,16 +93,20 @@ const CreateOrderModal: React.FC<CreateOrderModalProps> = ({ onClose, onOrderCre
             const selectedSubject = subjects.find((subject: any) => subject.id === parseInt(subject_name));
             const subjectName = selectedSubject ? selectedSubject.name : '';
 
+            const orderType = Object.keys(OrderTypesEnum).includes(type)
+                ? OrderTypesEnum[type as keyof typeof OrderTypesEnum]
+                : type;
+
             const dataToSend = {
-                type: OrderTypesEnum[type] || type,
+                type: orderType,
                 discipline_name: disciplineInUkr,
                 subject_name: subjectName,
-                number_of_pages: formData.number_of_pages,
-                deadline: formData.deadline,
+                number_of_pages,
+                deadline,
                 comment: formData.comment,
-                topic: formData.topic,
-                social_media: formData.social_media,
-                file: file ? file : null,
+                topic,
+                social_media,
+                file,
             };
 
             const { data } = await api.post('/order', dataToSend, {
@@ -104,7 +124,7 @@ const CreateOrderModal: React.FC<CreateOrderModalProps> = ({ onClose, onOrderCre
                 onOrderCreated();
                 onClose();
             }, 2500);
-        } catch (error: any) {
+        } catch (error) {
             setMessage('Помилка створення заявки.');
         }
     };
@@ -128,10 +148,9 @@ const CreateOrderModal: React.FC<CreateOrderModalProps> = ({ onClose, onOrderCre
                             ))}
                         </select>
                     </div>
-                    <div className="label ">
+                    <div className="label">
                         Дисципліна:
-                        <select name="discipline_name" value={formData.discipline_name}
-                                onChange={handleDisciplineChange}>
+                        <select name="discipline_name" value={formData.discipline_name} onChange={handleDisciplineChange}>
                             <option value="">Виберіть дисципліну</option>
                             {Object.entries(SubjectsByDiscipline).map(([key, value]) => (
                                 <option key={key} value={key}>
@@ -142,58 +161,44 @@ const CreateOrderModal: React.FC<CreateOrderModalProps> = ({ onClose, onOrderCre
                     </div>
                     <div className="label">
                         Предмет:
-                        <select name="subject_name" value={formData.subject_name} onChange={handleInputChange}
-                                disabled={!formData.discipline_name}>
+                        <select name="subject_name" value={formData.subject_name} onChange={handleInputChange} disabled={!formData.discipline_name}>
                             <option value="">Виберіть предмет</option>
-                            {subjects.length > 0 ? (
-                                subjects.map((subject: any) => (
-                                    <option key={subject.id} value={subject.id}>
-                                        {subject.name}
-                                    </option>
-                                ))
-                            ) : (
-                                <option value="">Предмети не знайдено</option>
-                            )}
+                            {subjects.map((subject: any) => (
+                                <option key={subject.id} value={subject.id}>
+                                    {subject.name}
+                                </option>
+                            ))}
                         </select>
                     </div>
                     <div className="label">
                         Кількість сторінок:
-                        <input type="number" name="number_of_pages" value={formData.number_of_pages}
-                               onChange={handleInputChange}/>
+                        <input type="number" name="number_of_pages" value={formData.number_of_pages} onChange={handleInputChange} />
                     </div>
-                    <div className="label ">
+                    <div className="label">
                         Дедлайн:
-                        <input type="date" name="deadline" value={formData.deadline} onChange={handleInputChange}/>
+                        <input type="date" name="deadline" value={formData.deadline} onChange={handleInputChange} />
                     </div>
-                    <div className="label ">
+                    <div className="label">
                         Тема:
-                        <input type="text" name="topic" value={formData.topic} onChange={handleInputChange}/>
+                        <input type="text" name="topic" value={formData.topic} onChange={handleInputChange} />
                     </div>
                     <div className="label">
                         Коментар:
-                        <textarea name="comment" value={formData.comment} onChange={handleInputChange}/>
+                        <textarea name="comment" value={formData.comment} onChange={handleInputChange} />
                     </div>
                     <div className="label">
-                        Нік в Telegram або телефон
-                        <input
-                            type="text"
-                            name="social_media"
-                            value={formData.social_media}
-                            onChange={handleInputChange}
-                            placeholder="@user"
-                        />
+                        Нік в Telegram або телефон:
+                        <input type="text" name="social_media" value={formData.social_media} onChange={handleInputChange} />
                     </div>
                     <div className="label">
                         Прикріпити файл:
-                        <input type="file" onChange={handleFileChange}/>
+                        <input type="file" onChange={handleFileChange} />
                     </div>
-                    <button type="submit" className="submit-button">Створити заявку</button>
+                    <button type="submit" className="submit-button">
+                        Створити заявку
+                    </button>
                 </form>
-                {message && (
-                    <p className={`message ${success ? 'success' : ''}`}>
-                        {message} {success && <span>✔️</span>}
-                    </p>
-                )}
+                {message && <p className={`message ${success ? 'success' : ''}`}>{message}</p>}
             </div>
         </div>
     );

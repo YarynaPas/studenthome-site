@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import CreateOrderForm from '@/components/CreateOrder/CreateOrderForm';
-import OrdersList from '@/components/OrdersList/OrdersList';
-import UserInfo from '@/components/UserInfo/UserInfo';
+import CreateOrderForm from '@/Components/CreateOrder/CreateOrderForm';
+import OrdersList from '@/Components/OrdersList/OrdersList';
+import UserInfo from '@/Components/UserInfo/UserInfo';
 import './styles/personal-cabinet.css';
 import FooterComponent from '@/Components/FooterComponent/FooterComponent';
 import Menu from '@/Components/MenuComponent/MenuComponent';
