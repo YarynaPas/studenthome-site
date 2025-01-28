@@ -8,7 +8,6 @@
     "watch:server": "nodemon --exec ts-node src/index.ts",
     "start": "node dist/main.js",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "prepare": "husky",
     "test": "echo \"No tests specified\" && exit 0"
   },
   "keywords": [],
