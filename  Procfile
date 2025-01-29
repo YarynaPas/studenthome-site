@@ -1,2 +1,5 @@
 web: npm run start:full
 heroku config:set NEXT_PRIVATE_TARGET=server
+heroku repo:purge_cache -a your-app-name
+heroku config:set NEXT_PUBLIC_API_URL=http://studenthome.com.ua:3003
+
