@@ -13,6 +13,5 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/types/multer.d.ts"
   ]
 }
