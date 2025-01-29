@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "engines": {
-    "node": "22.0.0",
-    "npm": ">=8.x"
+    "node": "22.x",
+    "npm": "8.x"
   },
   "scripts": {
     "build": "tsc",
