@@ -1,2 +1,2 @@
 web: npm run start:full
-
+heroku config:set NEXT_PRIVATE_TARGET=server
