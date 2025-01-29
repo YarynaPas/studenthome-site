@@ -10,6 +10,7 @@
     "start:backend": "cd src && npm run start",
     "start:frontend": "cd frontend && npm run dev",
     "start:full": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "heroku-postbuild": "npm install --prefix frontend && npm run build --prefix frontend",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "echo \"No tests specified\" && exit 0"
   },
