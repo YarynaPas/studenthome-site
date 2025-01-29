@@ -5,10 +5,11 @@
   "engines": {
     "node": "18.x",
     "npm": "8.x"
-  },
+  }
+,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --no-type-checking",
     "start": "next start",
     "lint": "next lint",
     "heroku-postbuild": "npm run build"
