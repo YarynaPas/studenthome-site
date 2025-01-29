@@ -2,6 +2,10 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "23.0.0",
+    "npm": ">=8.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,17 +14,18 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.1.3"
-  },
+  "kursova-server": "file:..",
+  "next": "15.1.3",
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0"
+},
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.3",
-    "@eslint/eslintrc": "^3"
+    "typescript": "^5"
   }
 }
