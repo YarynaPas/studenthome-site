@@ -7,10 +7,12 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "types": ["node", "multer"]
 
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "src/types/multer.d.ts"
   ]
 }
